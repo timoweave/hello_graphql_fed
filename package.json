@@ -1,0 +1,20 @@
+{
+  "name": "node-sandbox",
+  "version": "1.0.0",
+  "description": "Simple Node Sandbox",
+  "main": "src/index.js",
+  "scripts": {
+    "server1": "nodemon src/server1.js",
+    "start": "nodemon src/index.js localhost 8080"
+  },
+  "dependencies": {
+    "@apollo/federation": "0.6.0",
+    "@apollo/gateway": "0.6.1",
+    "apollo-server": "2.6.1",
+    "express": "4.17.1",
+    "graphql": "14.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  }
+}
