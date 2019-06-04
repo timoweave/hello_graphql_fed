@@ -4,7 +4,7 @@
   "description": "Simple Node Sandbox",
   "main": "src/index.js",
   "scripts": {
-    "account": "nodemon src/account.js localhost 8080",
+    "account": "nodemon src/account.js localhost 8081",
     "index": "nodemon src/index.js localhost 8080",
     "start": "npm start"
   },

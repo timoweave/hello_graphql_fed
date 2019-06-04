@@ -24,16 +24,23 @@ const typeDefs = gql`
   type User @key(fields: "id") {
     id: ID!
     name: String!
+    birthDate: String!
     username: String!
   }
   extend type Query {
     me: User
+    users: [User]
   }
 `;
 
 const resolvers = {
   me: () => {
     return users[0];
+  },
+  users: {
+    __resolveReference(object) {
+      return users;
+    }
   },
   User: {
     __resolveReference(object) {
@@ -44,11 +51,11 @@ const resolvers = {
 
 const playground = {
   introspection: true,
-  playground: true
-  /*
+  playground: true,
   settings: {
     'editor.theme': 'light',
   },
+  /*
   tabs: [
     {
       endpoint,
