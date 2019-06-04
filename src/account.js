@@ -43,10 +43,12 @@ const resolvers = {
 };
 
 const app = new ApolloServer({
-  schema: buildFederatedSchema({
-    typeDefs,
-    resolvers
-  })
+  schema: buildFederatedSchema([
+    {
+      typeDefs,
+      resolvers
+    }
+  ])
 });
 
 app.listen(port).then(({ url }) => {
