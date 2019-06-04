@@ -2,7 +2,7 @@ const { ApolloServer, gql } = require("apollo-server");
 const { buildFederatedSchema } = require("@apollo/federation");
 
 const {
-  server1: { port }
+  account: { port }
 } = require("./config");
 
 const users = [
@@ -42,15 +42,32 @@ const resolvers = {
   }
 };
 
+const playground = {
+  introspection: true,
+  playground: true
+  /*
+  settings: {
+    'editor.theme': 'light',
+  },
+  tabs: [
+    {
+      endpoint,
+      query: defaultQuery,
+    },
+  ],
+  */
+};
+
 const app = new ApolloServer({
   schema: buildFederatedSchema([
     {
       typeDefs,
-      resolvers
+      resolvers,
+      playground
     }
   ])
 });
 
 app.listen(port).then(({ url }) => {
-  console.log(`server1 ready at ${url}:${port}`);
+  console.log(`server1 ready at ${url}`);
 });

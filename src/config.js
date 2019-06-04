@@ -1,5 +1,5 @@
 const config = {
-  server1: {
+  account: {
     port: 8081
   },
   index: {
