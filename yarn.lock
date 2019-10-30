@@ -11,10 +11,10 @@
     apollo-graphql "^0.3.0"
     apollo-server-env "2.4.0"
 
-"@apollo/gateway@0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@apollo/gateway/-/gateway-0.6.1.tgz#3e24f3df526f1aab783bc85564b66c217588d4ca"
-  integrity sha512-M9oQdNWssGY88V9qr2FJTlHR6/91lYIXMdsy1j1oH9pAWWC2jyVpNORHwimZFP8tmeZO0cZM5itvuJmOa+8KZg==
+"@apollo/gateway@0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@apollo/gateway/-/gateway-0.6.2.tgz#0a10dbc2497da535507e0d42abf5d153a0bec2b6"
+  integrity sha512-lVUAfyfsdNpeKsu5BuXb3s1nK01zjIQVstbuYLO/pkSQTCKEniLsKWq+XdSlaZh3e09O7+5Z5hdRpA2yldBuyA==
   dependencies:
     "@apollo/federation" "0.6.0"
     apollo-env "^0.5.0"
